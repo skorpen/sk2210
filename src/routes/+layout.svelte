@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from './Header.svelte';
 	import '../app.css';
+	import { platformEnv } from '$lib/env';
 
 	let { children } = $props();
 </script>
@@ -11,6 +12,10 @@
 	<main>
 		{@render children()}
 	</main>
+
+	<section>
+		<p>Platform Environment: {platformEnv}</p>
+	</section>
 
 	<footer>
 		<p>
